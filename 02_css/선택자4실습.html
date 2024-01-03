@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자4실습</title>
+    <style>
+      h1:hover {
+        color: red;
+      }
+      a:active {
+        background-color: blue;
+      }
+      input:focus {
+        background-color: orange;
+      }
+      .stripes {
+        background-color: navy;
+        color: white;
+      }
+      .stripes div:nth-child() {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>H1 태그에 마우스가 올라가면 글자가 빨간색</h1>
+    <br />
+    <a href="https://www.naver.com">a 태그를 클릭하고 있으면 배경이 파란색</a
+    ><br />
+    <input type="text" value="input태그에 포커스가 가면 입력창이 오렌지색" />
+    <div class="stripes">
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+    </div>
+  </body>
+</html>

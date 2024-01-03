@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자4 - 속성</title>
+    <style>
+      [disabled] {
+        background-color: red;
+      }
+      [placeholder="이름"] {
+        background-color: orange;
+      }
+      input:not([placeholder]) {
+        background-color: blue;
+      }
+      [class="square"] {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="text1" />
+    <input type="text" placeholder="text2" />
+    <input type="text" placeholder="text3" disabled />
+    <input type="password" />
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="000 0000 0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+  </body>
+</html>
