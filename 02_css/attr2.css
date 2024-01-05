@@ -74,3 +74,89 @@
 .em {
   font-size: 2em;
 }
+
+.square {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.border {
+  background-color: yellow;
+  /* 단축 속성 : 굵기, 모양, 색깔 순 */
+  /* border: 3px solid red; */
+  border-color: red blue black white;
+  border-style: solid;
+  border-width: 10px;
+  border-right-width: 50px;
+}
+
+.rounded {
+  background-color: yellowgreen;
+  /* border-radius: 50px; */
+  border-radius: 5px 10px 20px 40px;
+  border-radius: 5px 40px;
+}
+
+.style {
+  background-color: yellowgreen;
+  border-style: dashed dotted solid double;
+  border-width: 5px;
+}
+.color {
+  border-color: red orange yellow green;
+  border-style: solid;
+}
+
+.box-sizing {
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
+  background-color: red;
+}
+.invisible {
+  visibility: hidden;
+  background-color: orangered;
+}
+
+.opacity-0 {
+  opacity: 0;
+  background-color: tomato;
+}
+
+.pre {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.pre:hover {
+  visibility: hidden;
+  /* display: none; */
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}

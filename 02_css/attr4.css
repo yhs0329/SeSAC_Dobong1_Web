@@ -1,0 +1,35 @@
+.box {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+}
+body {
+  height: 2000pxs;
+}
+
+.background {
+  /* 
+  background 단축 속성
+  background: color image repeat position size */
+  background: linear-gradient(black white);
+}
+
+.background-image {
+  background-image: url(./img/small_img.png);
+  background-repeat: repeat;
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  /* center, bottom, left, top 의 키워드로 지정 가능 */
+  /* background-position: center;
+  background-position: center top;
+  background-position: 100px 200px; */
+  /* background-size */
+  background-size: 50px;
+  background-size: 90px 50px;
+  background-size: contain;
+  background-size: cover;
+  /* background-attachment */
+  background-attachment: fixed;
+}
