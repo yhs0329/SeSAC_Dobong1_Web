@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 실습1</title>
+  </head>
+  <body>
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+
+  </head>
+  <body>
+    <script>
+      let chg = document.querySelector("span");
+      chg.innerHTML = "맛없다ㅡㅡ;;";
+      chg.style = "color:red; font-weight:bold;";
+      // style이라는 하나의 속성에 color, font-weight도 존재 등등
+      // span.style.fontweight='700';
+    </script>
+  </body>
+</html>

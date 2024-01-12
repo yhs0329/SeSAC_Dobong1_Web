@@ -210,19 +210,3 @@ numbers.forEach(function (element) {
   sum3 = sum3 + element;
 });
 console.log(sum3);
-
-// let sum1 = 0,
-//   sum2 = 0,
-//   sum3 = 0;
-// console.log(sum1, sum2, sum3);
-
-// for (let i = 0; i < numbers.length; i++) {
-//   sum1 += numbers[i];
-// }
-// for (let num of numbers) {
-//   sum2 += num;
-// }
-// numbers.forEach((num) => {
-//   sum3 += num;
-// });
-// console.log(sum1, sum2, sum3);
