@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>댓글 등록하기</title>
+  </head>
+  <body>
+    <h1>댓글 등록하기</h1>
+    <form>
+      <label for="userid">아이디</label>
+      <input type="text" id="userid" name="userid" />
+      <label for="comment">댓글</label>
+      <input type="text" id="comment" name="comment" />
+      <button type="submit">등록</button>
+    </form>
+    <ul class="comment-list"></ul>
+
+    <script>
+      // TODO: 아래 조건을 만족하도록 js 파일을 수정하기
+      // 문제
+      // - [ ] 아이디 input과 댓글 input을 입력하고 [등록] 버튼을 누르면, 댓글이 추가됩니다.
+      //     - 폼을 "제출"헸을 때에 해당하는 이벤트는 무엇인가요?
+      // - [ ] 아이디 값과 댓글 값을 가져와야 합니다.
+      // - [ ] <li> 태그를 새로 만들고, "아이디 - 댓글내용" 형식이 되도록 설정합니다.
+      // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
+      // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
+
+      //   let btn = document.querySelector("button");
+      //   btn.addEventListener("click", function (e) {
+      //     e.preventDefault(); // submit 이벤트에서는 새로고침이 됨, 새로 고침 X 코드
+      //     let id = document.querySelector("#userid");
+      //     let co = document.querySelector("#comment");
+      //     let idVal = id.value;
+      //     let coVal = co.value;
+      //     let li = document.createElement("li");
+      //     let ul = document.querySelector("ul");
+      //     li.innerHTML = `<strong>${idVal}</strong> - ${coVal}`;
+      //     ul.appendChild(li);
+      //     id.value = "";
+      //     co.value = "";
+      //   });
+
+      const form = document.querySelector("form");
+      const list = document.querySelector(".comment-list");
+
+      // form 요소의 button을 클릭하여 폼을 "제출" 했을 때,
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // 폼이 제출되고 새로고침 되는 것을 막음
+        // userid 라는 폼 요소에 접근
+        //   const userid = document.querySelector('#userid'); 와 같음
+        const userid = document.querySelector('input[name="userid"]');
+        // comment 라는 폼 요소에 접근
+        const commnet = document.querySelector('input[name="commnet"]');
+
+        const newComment = document.createElement("li"); // li 태그 생성
+        newComment.innerHTML = `<strong>${userid.value}</strong> - ${comment.value}`;
+        // userid 자체가 아니라 userid의 value를 받아야함
+        list.append(newComment); // comment-list 요소에 위에 만든 li 태그를 추가
+
+        // input 초기화
+
+        userid.value = "";
+        comment.value = "";
+      });
+    </script>
+  </body>
+</html>
