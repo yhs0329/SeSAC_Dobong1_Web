@@ -26,42 +26,27 @@
       // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
       // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
 
-      //   let btn = document.querySelector("button");
-      //   btn.addEventListener("click", function (e) {
-      //     e.preventDefault(); // submit 이벤트에서는 새로고침이 됨, 새로 고침 X 코드
-      //     let id = document.querySelector("#userid");
-      //     let co = document.querySelector("#comment");
-      //     let idVal = id.value;
-      //     let coVal = co.value;
-      //     let li = document.createElement("li");
-      //     let ul = document.querySelector("ul");
-      //     li.innerHTML = `<strong>${idVal}</strong> - ${coVal}`;
-      //     ul.appendChild(li);
-      //     id.value = "";
-      //     co.value = "";
-      //   });
-
-      const form = document.querySelector("form");
-      const list = document.querySelector(".comment-list");
-
-      // form 요소의 button을 클릭하여 폼을 "제출" 했을 때,
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // 폼이 제출되고 새로고침 되는 것을 막음
-        // userid 라는 폼 요소에 접근
-        //   const userid = document.querySelector('#userid'); 와 같음
-        const userid = document.querySelector('input[name="userid"]');
-        // comment 라는 폼 요소에 접근
-        const commnet = document.querySelector('input[name="commnet"]');
-
-        const newComment = document.createElement("li"); // li 태그 생성
-        newComment.innerHTML = `<strong>${userid.value}</strong> - ${comment.value}`;
-        // userid 자체가 아니라 userid의 value를 받아야함
-        list.append(newComment); // comment-list 요소에 위에 만든 li 태그를 추가
-
-        // input 초기화
-
-        userid.value = "";
-        comment.value = "";
+      let btn = document.querySelector("button");
+      // querySelector로 botton을 변수 btn에 저장
+      btn.addEventListener("click", function (e) {
+        // btn이 "클릭" 되었을 때 이벤트 리스너, 함수 e 발생
+        e.preventDefault();
+        // 서브밋 되었을 때 새로고침을 방지하게 위해 e.preventDefault 설정
+        let v1 = document.querySelector("#userid");
+        let v2 = document.querySelector("#comment");
+        // 입력한 값을 저장할 v1과 v2를 querySelector로 변수에 저장
+        let li = document.createElement("li");
+        let ul = document.querySelector("ul");
+        // submit 되었을 때 추가할 li를 생성하고 ul을 하단에 추가할 수 있게 ul을 쿼리셀렉
+        li.innerHTML = `<strong>${v1.value}</strong> - ${v2.value}`;
+        // 생성된 li에는 innerHTML로 위에서 저장한 v1,v2의 value값을 대입
+        // innerText는 텍스트 자체이기 때문에 <storng> 태그가 저장이 안됨
+        // v1 자체는 #userid라는 id를 뜻하기 때문에, 그 값이 .value를 붙여줌
+        ul.append(li);
+        // ul 밑에 li를 추가
+        v1.value = "";
+        v2.value = "";
+        // v1과 v2의 value를 공백으로 초기화
       });
     </script>
   </body>
