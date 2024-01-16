@@ -27,30 +27,31 @@
     <script>
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function cal() {
-        // let v1 = document.querySelector("#value1");
-        // let val1 = v1.value;
-        // let v2 = document.querySelector("#value2");
-        // let val2 = v2.value;
-        // let result = document.querySelector("#result");
-        // let operator = document.querySelector("#operator");
-        // let oper=operator.value;
-
-        // 값1, 값2, 연산자 요소들 선택 -> .value 값 가져오기
         let v1 = Number(document.querySelector("#value1").value);
         let v2 = Number(document.querySelector("#value2").value);
         let op = document.querySelector("#operator").value;
+        // 값1,2와 연산자 operator의 value를 querySelector 지정, 값1,2는 string으로 인식,
+        // Number로 숫자로 형 변환
         let result;
-        if (op === "+") {
+        // 결과값은 v1과 v2 사이의 연산자에 의해 달라지기 때문에 if문 사용
+        // 해당하는 연산자의 결과값을 result에 대입
+        if (op === "*") {
+          result = v1 * v2;
+        } else if (op === "+") {
           result = v1 + v2;
         } else if (op === "-") {
           result = v1 - v2;
-        } else if (op === "*") {
-          result = v1 * v2;
         } else if (op === "/") {
           result = v1 / v2;
+        } else {
+          alert("잘못된 연산자입니다.");
+          document.querySelector("#operator").value = "";
+          return;
+          // 잘못된 연산자의 경우 alert 표시, 연산자를 쿼리셀렉해서 값 초기화,
+          // return 공백으로 함수 진행하지 않고 종료(결과값 들어가지 않음)
         }
-        console.log(result);
-        document.getElementById("result").value = result;
+        document.querySelector("#result").value = result;
+        //결과값의 value를 지정해서 result를 대입
       }
 
       // [초기화] 버튼 클릭시 resetInput() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
