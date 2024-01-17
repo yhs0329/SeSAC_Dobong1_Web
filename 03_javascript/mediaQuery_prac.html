@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border-radius: 5%;
+        width: 100px;
+        height: 100px;
+      }
+      /* 가로가 700px 초과일 때 */
+      @media screen and (min-width: 700px) {
+        div {
+          display: inline-block;
+          background-color: black;
+          margin: 10px;
+        }
+      }
+
+      /* 가로가 700px 이하일 때 */
+      @media screen and (max-width: 700px) {
+        div {
+          background-color: skyblue;
+          border: 1px solid brown;
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
