@@ -16,13 +16,28 @@
       .fs-50 {
         font-size: 50px;
       }
+      .bg-pink {
+        background-color: pink;
+      }
     </style>
     <script>
       function addClass() {
         $("#hi").addClass("fs-50");
       }
       function removeClass() {
-        $("#hi").removeClass("fs-50");
+        // $("#hi").removeClass("fs-50");
+        $("#hi").removeClass();
+        // removeClass 인자를 비우면 글자색, 사이즈 등 모두 삭제
+      }
+
+      function hasClass() {
+        //true 혹은 false 반환
+        console.log($("#hi").hasClass("fs-50"));
+      }
+
+      function toggleClass() {
+        // 있으면 삭제, 없으면 추가
+        $("#hi").toggleClass("bg-pink");
       }
     </script>
   </head>
@@ -30,5 +45,7 @@
     <p id="hi" class="color-blue">안녕하세요!</p>
     <button onclick="addClass()">클래스 추가</button>
     <button onclick="removeClass()">클래스 삭제</button>
+    <button onclick="hasClass()">클래스 유무 확인</button>
+    <button onclick="toggleClass()">클래스 토글</button>
   </body>
 </html>
