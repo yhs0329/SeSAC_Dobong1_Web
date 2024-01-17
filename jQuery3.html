@@ -8,6 +8,12 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
     <style>
       .color-blue {
@@ -18,6 +24,9 @@
       }
       .bg-pink {
         background-color: pink;
+      }
+      .color-orange {
+        color: orange;
       }
     </style>
     <script>
@@ -39,6 +48,10 @@
         // 있으면 삭제, 없으면 추가
         $("#hi").toggleClass("bg-pink");
       }
+
+      function switchClass() {
+        $("#hi").switchClass("color-blue", "color-orange", 2);
+      }
     </script>
   </head>
   <body>
@@ -47,5 +60,6 @@
     <button onclick="removeClass()">클래스 삭제</button>
     <button onclick="hasClass()">클래스 유무 확인</button>
     <button onclick="toggleClass()">클래스 토글</button>
+    <button onclick="switchClass()">스위치 클래스</button>
   </body>
 </html>
