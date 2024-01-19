@@ -51,24 +51,24 @@
 
       // 1번 : colors 배열 사용 X
       function changeColor() {
-        // // red -> orange -> yellow -> green -> blue -> purple -> red
-        // // 1. div 요소 선택(클래스를 알아야 하니까) -> hasClass() 사용
-        // // 2. red 라는 클래스가 있다면, if문을 실행
-        // if ($("div").hasClass("red")) {
-        //   // red가 있다면 true, if문이 실행
-        //   // red -> orange
-        //   $("div").switchClass("red", "orange");
-        // } else if ($("div").hasClass("orange")) {
-        //   $("div").switchClass("orange", "yellow");
-        // } else if ($("div").hasClass("yellow")) {
-        //   $("div").switchClass("yellow", "green");
-        // } else if ($("div").hasClass("green")) {
-        //   $("div").switchClass("green", "blue");
-        // } else if ($("div").hasClass("blue")) {
-        //   $("div").switchClass("blue", "purple");
-        // } else if ($("div").hasClass("purple")) {
-        //   $("div").switchClass("purple", "red");
-        // }
+        // red -> orange -> yellow -> green -> blue -> purple -> red
+        // 1. div 요소 선택(클래스를 알아야 하니까) -> hasClass() 사용
+        // 2. red 라는 클래스가 있다면, if문을 실행
+        if ($("div").hasClass("red")) {
+          // red가 있다면 true, if문이 실행
+          // red -> orange
+          $("div").switchClass("red", "orange");
+        } else if ($("div").hasClass("orange")) {
+          $("div").switchClass("orange", "yellow");
+        } else if ($("div").hasClass("yellow")) {
+          $("div").switchClass("yellow", "green");
+        } else if ($("div").hasClass("green")) {
+          $("div").switchClass("green", "blue");
+        } else if ($("div").hasClass("blue")) {
+          $("div").switchClass("blue", "purple");
+        } else if ($("div").hasClass("purple")) {
+          $("div").switchClass("purple", "red");
+        }
 
         // 2번 : colors 배열 사용
         // red -> orange -> yellow -> green -> blue -> purple -> red
@@ -82,8 +82,9 @@
         console.log(i); // 0 ~ 5
 
         // purple 일 때
-        if (i == colors.length - 1) $("div").switchClass(colors[i], colors[0]);
-        else $("div").switchClass(colors[i], colors[i + 1]);
+        if (i == colors[5]) {
+          $("div").switchClass(colors[i], colors[0]);
+        } else $("div").switchClass(colors[i], colors[i + 1]);
       }
     </script>
   </head>
