@@ -73,6 +73,6 @@ app.get("/getForm", function (req, res) {
 //   });
 // });
 
-// app.listen(PORT, function () {
-//   console.log(`http://localhost:${PORT}`);
-// });
+app.listen(PORT, function () {
+  console.log(`http://localhost:${PORT}`);
+});
