@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/css.css" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/public/css/mypage.css" />
   </head>
   <body>
-    <h4><span><%=signInfo.name%></span>님 마이페이지</h4>
-    <img src="<%=fileInfo.path%>" alt="댕댕이" />
-    <div>아이디 : <%=signInfo.id%></div>
-    <div>비밀번호 : <%=signInfo.pw%></div>
-    <div>이름 : <%=signInfo.name%></div>
-    <div>나이 <%=signInfo.age%></div>
-    <div></div>
+    <!-- 
+  {
+    src: req.file.path,
+    userInfo: {
+        name:'진형',
+        ...
+    },
+  }
+     -->
+    <div>
+      <h1><%=userInfo.name%>님의 마이페이지</h1>
+      <img src="/<%=src%>" alt="프로필 이미지" width="200" />
+      <p>이름:<%=userInfo.name%></p>
+      <p>나이:<%=userInfo.age%></p>
+      <p>아이디:<%=userInfo.id%></p>
+      <p>비밀번호:<%=userInfo.password%></p>
+    </div>
   </body>
-
-  <script></script>
 </html>
