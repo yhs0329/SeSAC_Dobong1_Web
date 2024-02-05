@@ -37,7 +37,7 @@ let tempDB = [
   },
 ];
 
-const userId = "Allie";
+const userId = "daengdaeng";
 
 // 미들웨어 설정
 /*
