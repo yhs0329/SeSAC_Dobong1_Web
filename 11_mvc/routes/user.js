@@ -5,13 +5,13 @@ const controller = require("../controller/Cuser");
 // GET /user
 router.get("/", controller.user);
 
-/*
+/* 
 [예시]
 GET /user/aa
 router.get('/aa',controller.a);
 
 POST /user/login
-router.post('/login',controller.b);
+router.port('/login',controller.b)
 */
 
 module.exports = router;

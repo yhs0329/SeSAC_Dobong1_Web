@@ -12,7 +12,7 @@ exports.commentsInfo = () => {
       id: 2,
       userid: "banana",
       date: "2023-11-01",
-      comment: "반가워요.",
+      comment: "반가워유",
     },
     {
       id: 3,
@@ -23,8 +23,8 @@ exports.commentsInfo = () => {
     {
       id: 4,
       userid: "donut",
-      date: "2022-08-17",
-      comment: "점심시간이 다가오는군요.",
+      date: "2023-08-17",
+      comment: "점심시간이 다가오는군요..",
     },
   ];
 };
