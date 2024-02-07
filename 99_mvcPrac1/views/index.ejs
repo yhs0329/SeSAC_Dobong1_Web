@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습3</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h2>axios post 로그인</h2>
+    <form name="login">
+      ID <input type="text" id="id" name="id" /><br />
+      PW <input type="password" id="pw" name="pw" /><br />
+      <button type="button" onclick="axiosPost()">axios post 전송</button>
+      <div class="result">결과값 표시 부분</div>
+    </form>
+
+    <script>
+      const resArea = document.querySelector(".result");
+      function axiosPost() {
+        const form = document.forms["login"];
+        const data = {
+          id: form.id.value,
+          pw: form.pw.value,
+        };
+        axios({
+          method: "post",
+          url: "/axios",
+          data: data,
+        }).then((res) => {
+          if (res.data === true) {
+            resArea.innerText = "axios post 성공, 로그인 성공";
+            resArea.style.color = "blue";
+          } else {
+            resArea.innerText = "axios post 성공, 로그인 실패";
+            resArea.style.color = "red";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
