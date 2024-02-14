@@ -13,9 +13,12 @@ app.use(express.json());
 //   res.render("index");
 // });
 
-// 특정 시작 url의 역할 구분
+// (1). 특정 시작 url의 역할 구분
 const indexRouter = require("./routes");
 app.use("/", indexRouter);
+// app.user 로 루트에 대한 요청을 indexRouter,
+// indexRouter는 ./routers 경로에서 require
+// -> (2) routes의 index파일로
 
 app.listen(PORT, () => {
   console.log(`localhost:${PORT}`);
