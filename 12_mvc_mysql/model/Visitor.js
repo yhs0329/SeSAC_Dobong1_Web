@@ -25,12 +25,12 @@ exports.getVisitors = (cb) => {
   });
 };
 
-exports.getVisitor = (id, db) => {
+exports.getVisitor = (id, cb) => {
   conn.query(`SELECT * FROM visitor WHERE id=${id}`, (err, rows) => {
     if (err) throw err;
     console.log("Visitor.js 데이터 하나 조회", rows); // [{}]
     // 하나의 데이터를 찾아도 배열형태로 넘어옴
-    cb(row[0]);
+    cb(rows[0]);
   });
 };
 
@@ -61,12 +61,12 @@ exports.patchVisitor = (data, cb) => {
   console.log(data);
   conn.query(
     `UPDATE visitor
-    SET name='${data.name}' comment='${data.comment}'
+    SET name='${data.name}',comment='${data.comment}'
     WHERE id=${data.id}`,
     (err, rows) => {
       if (err) throw err;
       console.log("Visitor.js patch", rows);
-      cb(rows);
+      cb(true);
     }
   );
 };

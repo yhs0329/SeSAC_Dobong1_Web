@@ -19,9 +19,10 @@ exports.getVisitors = (req, res) => {
 
 // GET /visitor/:id
 exports.getVisitor = (req, res) => {
-  console.log(req, params);
-  console.log(req, params.id);
-  Visitor.getVisitor(req, params.id, (result) => {
+  // console.log(req);
+  console.log(req.params);
+
+  Visitor.getVisitor(req.params.id, (result) => {
     console.log("Cvisitor.js 데이터 하나 조회", result); // {}
     res.send(result);
   });
@@ -50,6 +51,7 @@ exports.patchVisitor = (req, res) => {
   console.log(req.body); // {id, name, comment}
   Visitor.patchVisitor(req.body, (result) => {
     console.log("Cvisitor.js patch", result);
+
     res.send("수정 완료");
   });
 };

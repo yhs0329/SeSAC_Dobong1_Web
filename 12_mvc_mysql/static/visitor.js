@@ -37,7 +37,7 @@ function createVisitor() {
       <td>
         <button
         type="button"
-        onclick="deleteVisitor(this,${data.id}')"
+        onclick="deleteVisitor(this,${data.id})"
         >
               삭제
             </button>
@@ -63,11 +63,11 @@ function deleteVisitor(btn, id) {
     alert(res.data);
     // 실제 요소 지우기
     // remove
-    //   btn.parentElement.parentElement.remove();
+    btn.parentElement.parentElement.remove();
 
     // closet()
     // 특정 선택자를 가진 가장 가까운 조상 요소를 찾음
-    btn.closest(`#tr_${id}`).remove();
+    // btn.closest(`#tr_${id}`).remove();
   });
 }
 
@@ -80,10 +80,12 @@ const btnGroup = document.querySelector("#btn-group");
 // GET /visitor/:id
 function editVisitor(id) {
   console.log(id);
+  const url = `/visitor/${id}`;
+  console.log(url);
   axios({
     method: "get",
-    url: `/visitor/${id}`,
-    params: { id: id },
+    url: url,
+    // params: { id: id },
   }).then((res) => {
     const { data } = res;
     console.log(data);
@@ -115,14 +117,15 @@ function editDo(id) {
     children[1].textContent = form.name.value;
     children[2].textContent = form.comment.value;
   });
+  editCancel();
 }
 
 // 취소 버튼을 누르거나, 수정이 끝난 후 실행
 function editCancel() {
   const form = document.forms["visitor-form"];
   // input 초기화
-  form.name.value === "";
-  form.comment.value === "";
+  form.name.value = "";
+  form.comment.value = "";
   // 등록 버튼으로 변경
   btnGroup.innerHTML = `<button type="button" onclick="createVisitor()">방명록 등록</button>
 `;
