@@ -17,7 +17,8 @@ CREATE TABLE user(
     userid VARCHAR(20) NOT NULL,
     name VARCHAR(20) NOT NULL,
     pw VARCHAR(20) NOT NULL
-)
+);
+
 -- user 데이블 데이터 추가
 INSERT INTO user (userid, name, pw) VALUES ('allie', 'allie', '1234');
 INSERT INTO user (userid, name, pw) VALUES ('test', 'test', '1234');
