@@ -11,6 +11,8 @@ drop table visitor;
 
 DESC visitor;
 
+desc user;
+
 INSERT INTO visitor(name, comment) VALUES('allie','hi~');
 INSERT INTO visitor VALUES(null, '홍길동',"홍길동입니다.");
 
@@ -19,14 +21,14 @@ select * from visitor;
 ############[DCL]###############
 
 -- ------새로운 user 만들기1
-CREATE USER 'sesac'@'%' IDENTIFIED BY '1154668';
+CREATE USER 'sesac'@'%' IDENTIFIED BY '1234';
 
-ALTER USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY '1154668';
+ALTER USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY '1234';
 -- 비밀번호 바꾸고 싶다면!
 
 DROP USER 'sesac'@'%';
 -- ------새로운 user만들기2
-CREATE USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY'1154668';
+CREATE USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY'1234';
 
 SELECT * from mysql.user;
 
@@ -36,3 +38,5 @@ FLUSH PRIVILEGES;
 -- 현재 사용중인 mysql 캐시를 지우고 새로운 설정 적용
 
 GRANT ALL PRIVILEGES ON *.* TO 'sesac'@'%' WITH GRANT OPTION;
+
+SELECT * FROM user;

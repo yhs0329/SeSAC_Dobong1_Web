@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 // axios
 const id = "aaa";
-const pw = "1154668";
+const pw = "1234";
 app.post("/axios", function (req, res) {
   if (req.body.id === id && req.body.pw === pw) {
     res.send(true);
