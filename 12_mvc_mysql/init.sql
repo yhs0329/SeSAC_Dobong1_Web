@@ -19,14 +19,14 @@ select * from visitor;
 ############[DCL]###############
 
 -- ------새로운 user 만들기1
-CREATE USER 'sesac'@'%' IDENTIFIED BY '1154668';
+CREATE USER 'sesac'@'%' IDENTIFIED BY '1234';
 
-ALTER USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY '1154668';
+ALTER USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY '1234';
 -- 비밀번호 바꾸고 싶다면!
 
 DROP USER 'sesac'@'%';
 -- ------새로운 user만들기2
-CREATE USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY'1154668';
+CREATE USER 'sesac'@'%' IDENTIFIED WITH mysql_native_password BY'1234';
 
 SELECT * from mysql.user;
 
