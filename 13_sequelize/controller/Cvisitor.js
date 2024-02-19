@@ -17,7 +17,7 @@ exports.getVisitors = (req, res) => {
     res.render("visitor", { data: result });
   }); */
 
-  // 3. [sequeilize 연결!]
+  // 3. [sequelize 연결!]
   models.Visitor.findAll().then((result) => {
     console.log("findAll >>", result);
     res.render("visitor", { data: result }); // [{},{}]
@@ -109,16 +109,8 @@ exports.patchVisitor = (req, res) => {
     {
       where: { id: req.body.id },
     }
-  )
-    .then((result) => {
-      if (result[0] > 0) {
-        res.send("수정완료");
-      } else {
-        res.status(404).send("해당하는 방명록이 없습니다.");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).send("서버에러");
-    });
+  ).then((result) => {
+    console.log(result);
+    res.send("수정 완료");
+  });
 };
