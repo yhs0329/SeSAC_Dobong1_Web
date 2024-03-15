@@ -15,7 +15,7 @@ export default function prac1() {
       <br></br>
       <div>{a > b && "a가 b보다 큽니다."}</div>
       <br></br>
-      <div className="prac5">
+      <div className="container">
         <h1 className="prac4">Hello World</h1>
         아이디 : <input type="text"></input>
         <br></br>
