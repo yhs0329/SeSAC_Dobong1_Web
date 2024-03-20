@@ -1,6 +1,6 @@
 import ChangeObj from "./ChangeObj";
 export default function PororoObj() {
-  constpororoObjArr = [
+  const pororoObjArr = [
     {
       name: "뽀로로",
       age: "7",

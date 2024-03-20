@@ -40,8 +40,8 @@ ClassProps2.defaultProps = {
   bgColor: "skyblue",
 };
 
-food.defaultProps = {
-  bgColor: "skyblue",
-};
+// food.defaultProps = {
+//   bgColor: "skyblue",
+// };
 
 export { ClassProps, ClassProps2 };

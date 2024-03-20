@@ -1,22 +1,52 @@
-import { ClassState } from "./components/ClassProps";
+import { ClassProps, ClassProps2 } from "./components/ClassProps";
+import ClassState from "./components/ClassState";
+import { FunctionProps, FunctionProps2 } from "./components/FunctionProps";
+import FunctionState from "./components/FunctionState";
+import PropsMap from "./components/practice/PropsMap";
+import Alphabet from "./components/practice/Alphabet";
+// import PororoObj from "./components/practice/PororoObj";
+import PracticeState from "./components/practice/PracticeState";
+import PracticeMap2 from "./components/practice/PropsMap2";
 
 function App() {
+  const dataArr = [
+    { name: "peach", number: 5, price: 5000 },
+    { name: "banana", number: 1, price: 3000 },
+    { name: "apple", number: 10, price: 7000 },
+    { name: "grape", number: 2, price: 8500 },
+  ];
   return (
     <div className="App">
-      <h1>hello, props</h1>
-      <ClassProps name="루피" color="pink" nickname="공주"></ClassProps>
-      <ClassProps name="뽀로로" color="blue" nickname="사고뭉치"></ClassProps>
+      {/* <h1>hello, props</h1>
+      <ClassProps name="루피" color="pink" nickname="공주" />
+      <ClassProps name="뽀로로" color="blue" nickname="사고뭉치" />
       <ClassProps2
         name="포비"
         color="beige"
         nickname="곰"
         // bgColor="black"
-      ></ClassProps2>
-      <FunctionProps name="사과" number={5} price={1000}></FunctionProps>
+      />
+      <FunctionProps name="사과" number={5} price={1000} />
       <FunctionProps2 price={50000} />
-      <FunctionProps2>여기가 children props라고 합니다.</FunctionProps2>
+      <FunctionProps2 price={10000} name="딸기">
+        <section style={{ backgroundColor: "yellow" }}>
+          <article>1</article>
+          <article>2</article>
+          <article>3</article>
+        </section>
+      </FunctionProps2>
+
+      <h1>hello, state</h1>
+      <ClassState />
+      <FunctionState />
 
       <h1>연습문제</h1>
+      <PracticeState></PracticeState>
+      <PororoObj /> */}
+      <h1>map과 filter 사용</h1>
+      <PropsMap arr={dataArr} />
+      <Alphabet />
+      <PracticeMap2 />
     </div>
   );
 }

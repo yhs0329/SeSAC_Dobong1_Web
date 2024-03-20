@@ -1,6 +1,6 @@
+import { useState } from "react";
 export default function ChangeObj(props) {
   const { objArr } = props; // Array
-
   const [idx, setIdx] = useState(0);
   function changeProfile() {
     if (idx === objArr.length - 1) {
