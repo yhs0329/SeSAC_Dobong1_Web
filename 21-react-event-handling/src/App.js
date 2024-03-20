@@ -1,6 +1,7 @@
 import Counter from "./Counter";
 import SynthecticEvent from "./SynthecticEvent";
 import HandlerEx from "./HandlerEx";
+import EntirePractice from "./practice/EntirePractice";
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
       <SynthecticEvent></SynthecticEvent>
       <Counter></Counter>
       <HandlerEx></HandlerEx>
+      <hr />
+      <h1 style={{ textAlign: "center" }}>실습문제</h1>
+      <EntirePractice />
     </div>
   );
 }
