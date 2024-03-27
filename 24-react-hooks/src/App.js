@@ -5,6 +5,7 @@ import UseMemo from "./components/UseMemo";
 import UseMemoObj from "./components/UseMemoObj";
 import UseReducer from "./components/UseReducer";
 import useTitle from "./hooks/useTitle";
+import Form from "./components/UseForm";
 
 function App() {
   useTitle("React hook!");
@@ -15,8 +16,9 @@ function App() {
       <UseMemoObj /> */}
       {/* <UseCallback />
       <UseCallback2 /> */}
-      <UseReducer />
-      <CustomHook />
+      {/* <UseReducer /> */}
+      {/* <CustomHook /> */}
+      <Form />
     </>
   );
 }
